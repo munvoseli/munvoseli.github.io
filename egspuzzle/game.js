@@ -156,7 +156,7 @@ window.onload = function() { // I don't actually know if the image is loaded, ju
     function startGameFirst()
     {
 	hasBegun = true;
-	rulestoggle.style.display = "inline";
+	rulestoggle.style.display = "block";
 	rulestoggle.addEventListener("click", function() {
 	    if (this.innerHTML == "Show Rules")
 	    {
