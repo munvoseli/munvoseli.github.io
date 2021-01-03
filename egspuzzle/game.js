@@ -81,6 +81,7 @@ Board.prototype.isClear = function()
 
 var board = new Board(0, 0);
 var startTime = new Date().getTime();
+var hasFinished = false;
 var totalTime = 0;
 var timediv;
 function canvasClick(e)
@@ -96,8 +97,9 @@ function canvasClick(e)
 	var ctx = e.target.getContext("2d");
 	ctx.clearRect(x * 64, y * 64, 64, 64);
     }
-    if (board.isClear())
+    if (board.isClear() && !hasFinished)
     {
+	hasFinished = true;
 	var endTime = new Date().getTime();
 	var elapsed = endTime - startTime;
 	totalTime += elapsed;
@@ -112,6 +114,7 @@ window.onload = function() { // I don't actually know if the image is loaded, ju
     var canvas = document.getElementById("canvas");
     function startGame()
     {
+	hasFinished = false;
 	startTime = new Date().getTime();
 	var size = Number(document.getElementById("sizeinput").value);
 	board = new Board(size, size);
