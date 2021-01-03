@@ -123,8 +123,17 @@ function canvasClick(e)
 	}
 	if (board.h >= 5)
 	{
-	    ctx.fillText("Arthur's legs", 32, y += 32);
-	    ctx.fillText("are back.", 32, y += 32);
+	    ctx.fillText("everything is", 32, y += 32);
+	    ctx.fillText("okay again.", 32, y += 32);
+	}
+	if (board.h >= 6)
+	{
+	    ctx.fillText("What happens when", 16, y += 32);
+	    ctx.fillText("you scare magician?", 16, y += 32);
+	}
+	if (board.h >= 7)
+	{
+	    ctx.fillText("he poops your pants.", 16, y += 32);
 	}
     }
 }
