@@ -15,6 +15,7 @@
 	  <li>Get rid of goo by clicking on it.</li>
 	  <li>You can only get rid of goo if the amount of eyes in a cell is less than or equal to the amount of neighboring cells that also have goo. (for a maximum of 8)</li>
 	</ul>
+	<p>Also, the last tile on the board has to be a 0-eye tile if you're going to win.</p>
 	<p>Sorry if you're colorblind. I tried to make a brightness difference, but I'm not sure if it's noticeable.</p>
       </div>
       <div id="actualgamebox" style="display: none;">
@@ -24,6 +25,7 @@
     <div id="sidebar">
       <label for="sizeinput">Size: </label><input type="number" value="3" id="sizeinput"><br>
       <button id="startbutton">Waiting for things to load...</button>
+      <button id="rulestoggle" style="display: none;">Show Rules</button>
       <div id="timediv" style="display: none;">
       </div>
     </div>

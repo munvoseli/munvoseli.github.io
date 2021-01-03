@@ -45,7 +45,7 @@ Board.prototype.fillWithStart = function (x, y)
 		if (this.getVal(xi, yi) == -1 && this.getNeighborSum(xi, yi) > 0)
 		    canBeFilledCoords.push([xi, yi]);
 	var selCoords = canBeFilledCoords[Math.floor(Math.random() * canBeFilledCoords.length)];
-	this.arr[selCoords[0] + selCoords[1] * this.w] = Math.ceil(this.getNeighborSum(selCoords[0], selCoords[1]) * (1 - Math.random() * Math.random()));
+	this.arr[selCoords[0] + selCoords[1] * this.w] = Math.round(this.getNeighborSum(selCoords[0], selCoords[1]) * (1 - Math.random() * Math.random()));
     }
 }
 Board.prototype.fill = function()
@@ -137,7 +137,7 @@ function canvasClick(e)
 	}
     }
 }
-
+var hasBegun = false;
 window.onload = function() { // I don't actually know if the image is loaded, just assuming
     timediv = document.getElementById("timediv");
     var canvas = document.getElementById("canvas");
@@ -152,6 +152,27 @@ window.onload = function() { // I don't actually know if the image is loaded, ju
 	document.getElementById("explain").style.display = "none";
 	document.getElementById("actualgamebox").style.display = "inline";
     }
+    var rulestoggle = document.getElementById("rulestoggle");
+    function startGameFirst()
+    {
+	hasBegun = true;
+	rulestoggle.style.display = "inline";
+	rulestoggle.addEventListener("click", function() {
+	    if (this.innerHTML == "Show Rules")
+	    {
+		this.innerHTML = "Show Game";
+		document.getElementById("explain").style.display = "inline";
+		document.getElementById("actualgamebox").style.display = "none";
+	    }
+	    else
+	    {
+		this.innerHTML = "Show Rules";
+		document.getElementById("explain").style.display = "none";
+		document.getElementById("actualgamebox").style.display = "inline";
+	    }
+	}, false);
+	startGame();
+    }
     document.addEventListener("keydown", function(e) {
 	if (e.key == "t")
 	    timediv.style.display = "inline";
@@ -161,10 +182,13 @@ window.onload = function() { // I don't actually know if the image is loaded, ju
     var hasLoadedSprites = false;
     var hasStartedGame = false;
     button.innerHTML = "Generate Board";
-
+	    
     function startFromButton()
     {
-	startGame();
+	if (hasBegun)
+	    startGame();
+	else
+	    startGameFirst();
     }
     button.addEventListener("click", startFromButton, false);
 }
