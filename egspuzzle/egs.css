@@ -24,7 +24,7 @@ body {
     border-radius: 10px;
     padding: 15px;
     margin: 15px;
-    width: 200px;
+    min-width: 140px;
 }
 
 #sidebar input {
@@ -33,11 +33,12 @@ body {
 
 #actualgamebox {
     height: 100%;
+    width: 100%;
 }
 
 canvas {
-    height: 100%;
-    width: auto;
+    max-width: 100%;
+    max-height: 100%;
     image-rendering: optimizespeed;
     image-rendering: pixelated;
 }
