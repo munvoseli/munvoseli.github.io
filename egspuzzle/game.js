@@ -106,6 +106,26 @@ function canvasClick(e)
 	var p = document.createElement("p");
 	p.innerHTML = board.w + "x" + board.h + ": " + (elapsed / 1000).toFixed(3);
 	timediv.appendChild(p);
+	var ctx = e.target.getContext("2d");
+	ctx.font = "30px monospace";
+	var y = 0;
+	if (board.h >= 3)
+	{
+	    ctx.fillText("Congrats", 32, y += 32);
+	    ctx.fillText("You defeated", 16, y += 32);
+	    ctx.fillText("the goo.", 48, y += 32);
+	}
+	if (board.h >= 4)
+	{
+	    ctx.fillText("World hunger", 32, y += 32);
+	    ctx.fillText("has been", 32, y += 32);
+	    ctx.fillText("resolved", 32, y += 32);
+	}
+	if (board.h >= 5)
+	{
+	    ctx.fillText("Arthur's legs", 32, y += 32);
+	    ctx.fillText("are back.", 32, y += 32);
+	}
     }
 }
 
