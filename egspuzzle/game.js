@@ -118,6 +118,7 @@ window.onload = function() { // I don't actually know if the image is loaded, ju
 	board.fill();
 	board.draw(canvas);
 	document.getElementById("explain").style.display = "none";
+	document.getElementById("actualgamebox").style.display = "inline";
     }
     document.addEventListener("keydown", function(e) {
 	if (e.key == "t")
