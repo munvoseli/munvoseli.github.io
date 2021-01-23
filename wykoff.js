@@ -229,7 +229,7 @@ function updateTouches(touchList)
       ctx.fillText(lastPitches.length, 20, 80);*/
     lastPitches = nowPitches;
 }
-document.addEventListener("touchstart", function(e) {e.preventDefault();}, false); // for preventing default
+document.body.addEventListener("touchstart", function(e) {e.preventDefault(); e.stopPropogation();}, false); // for preventing default
 canvas.addEventListener("touchstart", function(e) {
     e.preventDefault();
     updateTouches(e.touches);
