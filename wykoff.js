@@ -236,7 +236,7 @@ function absorbEverything (e)
     e.preventDefault();
     e.stopPropogation();
     e.cancelBubble = true;
-    e.returnValue = true;
+    e.returnValue = false;
 }
 function preventEverything (el) // for preventing default
 {
