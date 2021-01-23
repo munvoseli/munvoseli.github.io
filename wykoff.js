@@ -229,16 +229,34 @@ function updateTouches(touchList)
       ctx.fillText(lastPitches.length, 20, 80);*/
     lastPitches = nowPitches;
 }
-document.addEventListener("touchstart", function(e) {e.preventDefault(); e.stopPropogation();}, false); // for preventing default
-canvas.addEventListener("touchstart", function(e) {
+
+
+function absorbEverything (e)
+{
     e.preventDefault();
+    e.stopPropogation();
+    e.cancelBubble = true;
+    e.returnValue = true;
+}
+function preventEverything (el) // for preventing default
+{
+    el.addEventListener("touchstart", absorbEverything, false);
+    el.addEventListener("touchmove", absorbEverything, false);
+    el.addEventListener("touchend", absorbEverything, false);
+    el.addEventListener("touchcancel", absorbEverything, false);
+}
+preventEverything (window);
+preventEverything (document);
+preventEverything (canvas);
+canvas.addEventListener("touchstart", function(e) {
+    absorbEverything (e);
     updateTouches(e.touches);
 }, false);
 canvas.addEventListener("touchend", function(e) {
-    e.preventDefault();
+    absorbEverything (e);
     updateTouches(e.targetTouches);
 }, false);
 canvas.addEventListener("touchmove", function(e) {
-    e.preventDefault();
+    absorbEverything (e);
     updateTouches(e.touches);
 }, false);
