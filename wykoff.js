@@ -251,9 +251,10 @@ function preventEverything (el) // for preventing default
     el.ontouchend = absorbEverything;
     el.ontouchcancel = absorbEverything;
 }
-//preventEverything (window);
-//preventEverything (document);
-//preventEverything (canvas);
+preventEverything (window);
+preventEverything (document);
+preventEverything (document.body);
+preventEverything (canvas);
 canvas.addEventListener("touchstart", function(e) {
     //console.log("hi");
     absorbEverything (e);
