@@ -237,13 +237,18 @@ function absorbEverything (e)
     e.stopPropogation();
     e.cancelBubble = true;
     e.returnValue = false;
+    return false;
 }
 function preventEverything (el) // for preventing default
 {
-    el.addEventListener("touchstart", absorbEverything, false);
+    /*el.addEventListener("touchstart", absorbEverything, false);
     el.addEventListener("touchmove", absorbEverything, false);
     el.addEventListener("touchend", absorbEverything, false);
-    el.addEventListener("touchcancel", absorbEverything, false);
+    el.addEventListener("touchcancel", absorbEverything, false);*/
+    el.ontouchstart = absorbEverything;
+    el.ontouchmove = absorbEverything;
+    el.ontouchend = absorbEverything;
+    el.ontouchcancel = absorbEverything;
 }
 preventEverything (window);
 preventEverything (document);
