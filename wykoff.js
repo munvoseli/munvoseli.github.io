@@ -231,12 +231,13 @@ function updateTouches(touchList)
 }
 
 
+var ev;
 function absorbEverything (e)
 {
     e.preventDefault();
-    e.stopPropogation();
+    e.stopPropagation();
     e.cancelBubble = true;
-    e.returnValue = false;
+    e.returnValue = false; // this is what matters, others for safety
     return false;
 }
 function preventEverything (el) // for preventing default
@@ -250,10 +251,11 @@ function preventEverything (el) // for preventing default
     el.ontouchend = absorbEverything;
     el.ontouchcancel = absorbEverything;
 }
-preventEverything (window);
-preventEverything (document);
-preventEverything (canvas);
+//preventEverything (window);
+//preventEverything (document);
+//preventEverything (canvas);
 canvas.addEventListener("touchstart", function(e) {
+    //console.log("hi");
     absorbEverything (e);
     updateTouches(e.touches);
 }, false);
