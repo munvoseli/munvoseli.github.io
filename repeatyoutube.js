@@ -20,12 +20,19 @@ function onYouTubeIframeAPIReady()
 }
 
 
+
+function keepVideoLooped() // can't use the end event, or my iPhone will just stop, even with telling it to play
+{
+    if (player.getCurrentTime() + .1 > duration)
+	player.seekTo(0);
+}
 function onPlayerReady() {
-    console.log(player.getDuration());
+    duration = player.getDuration();
+    setInterval(keepVideoLooped, 100);
 };
 function onPlayerStateChange(e) {
-    if (e.data == YT.PlayerState.PLAYING)
-	setTimeout(function() {player.seekTo(0);}, Math.round(duration - 1) * 1000);
+    //if (e.data == YT.PlayerState.PLAYING)
+    //setTimeout(function() {player.seekTo(0);}, Math.round(duration - 1) * 1000);
 }
 
 var input = document.getElementById("input");
