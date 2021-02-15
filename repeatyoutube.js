@@ -23,7 +23,7 @@ function onYouTubeIframeAPIReady()
 
 function keepVideoLooped() // can't use the end event, or my iPhone will just stop, even with telling it to play
 {
-    if (player.getCurrentTime() + .1 > duration)
+    if (player.getCurrentTime() + .6 > duration)
 	player.seekTo(0);
 }
 function onPlayerReady() {
