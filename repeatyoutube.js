@@ -88,6 +88,7 @@ CAMWdvo71ls Tous Les Memes
 rK0lMLCM3Mg Warriors
 RrirVkPHNdM Listening with a Million Ears
 iKnwVvXkWq0 Celeste 5B
+VXIqXaX1blY Celeste Farewell
 ZGM90Bo3zH0 Steins;Gate opening`.split("\n");
 for (var link of links)
 {
