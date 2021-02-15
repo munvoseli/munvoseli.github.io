@@ -32,7 +32,6 @@ function onPlayerStateChange(e) {
 }
 
 var input = document.getElementById("input");
-input.value = "gvdf5n-zI14";
 var button = document.getElementById("button");
 const ytstrings = [
     "youtu.be/",
