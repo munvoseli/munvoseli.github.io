@@ -2,11 +2,11 @@
 var url = window.location.href;
 var indexOfQuery = url.indexOf("?");
 var player;
+var duration;
 function onYouTubeIframeAPIReady()
 {
     if (indexOfQuery >= 0)
     {
-	console.log("hi");
 	player = new YT.Player ("player", {
 	    width: "640",
 	    height: "390",
@@ -19,24 +19,13 @@ function onYouTubeIframeAPIReady()
     }
 }
 
-var startPlayTime;
-var endPlayTime;
 
 function onPlayerReady() {
-    console.log("e", e);
+    console.log(player.getDuration());
 };
 function onPlayerStateChange(e) {
-    console.log(e);
     if (e.data == YT.PlayerState.PLAYING)
-    {
-	if (!startPlayTime)
-	    startPlayTime = new Date().getTime();
-	else if (endPlayTime)
-	    setTimeout(function() {player.seekTo(0);}, endPlayTime - startPlayTime - 1000);
-    }
-    else if (e.data == YT.PlayerState.ENDED)
-	if (!endPlayTime)
-	    endPlayTime = new Date().getTime();
+	setTimeout(function() {player.seekTo(0);}, Math.round(duration - 1) * 1000);
 }
 
 var input = document.getElementById("input");
