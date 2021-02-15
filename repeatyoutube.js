@@ -63,3 +63,41 @@ function submitString ()
     window.location.href = newurl;
 }
 button.addEventListener("click", submitString, false);
+
+
+
+var ul = document.getElementById("linklist");
+var links = `\
+5K4AsbH3xm8 This Day Aria
+vlnTkwOfjZ4 You'll Play Your Part
+mZvSriNSvUk Open Up Your Eyes
+YzNL-0wXK84 A Kirin Tale
+nplYVvRp4XQ Magic of Friendship
+xPfMb50dsOk Discord
+H4tyvJJzSDk Lullaby for a Princess
+AfMYKSdZdAY Soldiers of the Night
+5ZrMvFmSKDo Pegasus Device
+nZrdeMWWpAQ Equality
+YoiUZZk6SwU A Sound I'll Never Know
+uH2Ns9Tewpo FiW - It'll Be Ok
+r1ezBY62TUs swim
+ped4MouGzzs Paint the Moon Red
+5e_4Devi_YY House of Glass
+oiKj0Z_Xnjc Papaoutai
+CAMWdvo71ls Tous Les Memes
+rK0lMLCM3Mg Warriors
+RrirVkPHNdM Listening with a Million Ears
+iKnwVvXkWq0 Celeste 5B
+ZGM90Bo3zH0 Steins;Gate opening`.split("\n");
+for (var link of links)
+{
+    var i = link.indexOf(" ");
+    var id = link.substring(0, i);
+    var text = link.substring(i + 1);
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+    a.innerHTML = text;
+    a.href = "?" + id;
+    li.appendChild(a);
+    ul.appendChild(li);
+}
