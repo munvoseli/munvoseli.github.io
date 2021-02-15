@@ -19,16 +19,24 @@ function onYouTubeIframeAPIReady()
     }
 }
 
+var startPlayTime;
+var endPlayTime;
+
 function onPlayerReady() {
     console.log("e", e);
 };
 function onPlayerStateChange(e) {
     console.log(e);
-    if (e.data == YT.PlayerState.ENDED)
+    if (e.data == YT.PlayerState.PLAYING)
     {
-	player.seekTo(0);
-	player.playVideo();
+	if (!startPlayTime)
+	    startPlayTime = new Date().getTime();
+	else if (endPlayTime)
+	    setTimeout(function() {player.seekTo(0);}, endPlayTime - startPlayTime - 1000);
     }
+    else if (e.data == YT.PlayerState.ENDED)
+	if (!endPlayTime)
+	    endPlayTime = new Date().getTime();
 }
 
 var input = document.getElementById("input");
