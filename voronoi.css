@@ -1,0 +1,8 @@
+#add-include-list button {
+    /*display: block;*/
+    margin: 1em;
+}
+
+canvas {
+    display: block;
+}
