@@ -4,9 +4,9 @@ const elButton = document.getElementById ("button");
 
 function randomComic ()
 {
-    var nComic = Math.floor (Math.random() * cComic) << 1;
-    elImage.src = comicData [nComic];
-    elButton.innerText = comicData [nComic + 1];
+    var nComic = Math.floor (Math.random() * cComic);
+    elImage.src = comicData [nComic * 2];
+    elButton.innerText = nComic + 1;//comicData [nComic + 1];
 }
 
 //elImage.addEventListener ("click", randomComic, false);
