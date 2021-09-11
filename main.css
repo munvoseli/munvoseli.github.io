@@ -1,2 +1,79 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 
 
+
+
+html {
+    margin: none;
+}
+
+body {
+    background-color: #789;
+    margin: 0;
+    line-height: 1.5;
+    font-family: monospace;
+    font-size: 12pt;
+}
+
+header, main, footer {
+    max-width: 40em;
+    margin: 10px auto;
+    border: 2px solid #123;
+    background-color: #def;
+}
+
+h1 {
+    margin: 1em 1em;
+}
+
+p {
+    margin: 1em 1em;
+}
+
+ul {
+    margin-left: 2em;
+}
+
+li {
+    margin: .5em 1em;
+}
+
+a {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+    outline: #987;
+    outline-width: 4px;
+    outline-style: solid;
+    /*outline-offset: 2px;*/
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+}
