@@ -43,14 +43,10 @@ header, main, footer {
     max-width: 40em;
     margin: 10px auto;
     border: 2px solid #123;
-    background-color: #def;
+    background-color: #fed;
 }
 
-h1 {
-    margin: 1em 1em;
-}
-
-p {
+h1, p, .iframe-wrapper {
     margin: 1em 1em;
 }
 
@@ -66,6 +62,11 @@ a {
     text-decoration-line: underline;
     text-decoration-style: dotted;
     text-decoration-thickness: 2px;
+    color: #048;
+}
+
+a:visited {
+    color: #402;
 }
 
 :focus-visible {
@@ -76,4 +77,9 @@ a {
     background-color: #fff;
     color: #000;
     text-decoration: none;
+}
+
+.fillbert {
+    margin: 1em 1em;
+    height: 10px;
 }
