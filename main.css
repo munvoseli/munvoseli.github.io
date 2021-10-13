@@ -37,7 +37,7 @@ body {
     line-height: 1.5;
     font-family: monospace;
     font-size: 12pt;
-    overflow-y: hidden; /* due to scrollbar messing with main x and page width */
+    overflow-y: scroll; /* either scroll or hidden due to scrollbar messing with main x and page width */
 }
 
 header, main, footer {
