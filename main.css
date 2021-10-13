@@ -43,7 +43,7 @@ header, main, footer {
     max-width: 40em;
     margin: 10px auto;
     border: 2px solid #123;
-    background-color: #fed;
+    background-color: #def;
 }
 
 h1, p, .iframe-wrapper {
@@ -62,21 +62,26 @@ a {
     text-decoration-line: underline;
     text-decoration-style: dotted;
     text-decoration-thickness: 2px;
-    color: #048;
+    color: #345;
 }
 
 a:visited {
-    color: #402;
+    color: #345;
 }
 
 :focus-visible {
-    outline: #987;
+    outline: none;
+    text-decoration-skip-ink: all;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 4px;
+    /*outline: #789;
     outline-width: 4px;
     outline-style: solid;
+    text-decoration: none;*/
     /*outline-offset: 2px;*/
     background-color: #fff;
     color: #000;
-    text-decoration: none;
 }
 
 .fillbert {
