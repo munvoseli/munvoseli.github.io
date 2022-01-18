@@ -32,7 +32,10 @@ html {
 }
 
 body {
-    background-color: #789;
+    background-color: #456;
+    background-image: url('bg.svg');
+    background-position: center;
+    background-repeat: repeat;
     margin: 0;
     line-height: 1.5;
     font-family: monospace;
@@ -47,8 +50,12 @@ header, main, footer {
     background-color: #def;
 }
 
-h1, p, .iframe-wrapper {
+h1, h2, h3, p, .iframe-wrapper {
     margin: 1em 1em;
+}
+
+h2, h3 {
+    font-size: 1.2em;
 }
 
 ul {
