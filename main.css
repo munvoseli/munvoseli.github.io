@@ -25,15 +25,16 @@ time, mark, audio, video {
 }
 
 
-
-
-html {
-    margin: none;
+:root {
+	--bg-bg: #351;
+	--bg-content: #ded;
+	--fg-a: #341;
 }
 
+
 body {
-    background-color: #456;
-    background-image: url('bg.svg');
+    background-color: var(--bg-bg);
+/*    background-image: url('bg.svg');*/
     background-position: center;
     background-repeat: repeat;
     margin: 0;
@@ -46,12 +47,20 @@ body {
 header, main, footer {
     max-width: 40em;
     margin: 10px auto;
-    border: 2px solid #123;
-    background-color: #def;
+    padding: 1em;
+/*    border: 2px solid #123;*/
+    background-color: var(--bg-content);
 }
 
-h1, h2, h3, p, .iframe-wrapper {
-    margin: 1em 1em;
+p, .iframe-wrapper {
+    margin: 1em 0;
+}
+
+:first-child {
+    margin-top: 0;
+}
+:last-child {
+    margin-bottom: 0;
 }
 
 h2, h3 {
@@ -69,12 +78,12 @@ li {
 a {
     text-decoration-line: underline;
     text-decoration-style: dotted;
-    text-decoration-thickness: 2px;
-    color: #345;
+    text-decoration-thickness: 1px;
+    color: var(--fg-a);
 }
 
 a:visited {
-    color: #345;
+    color: var(--fg-a);
 }
 
 :focus-visible {
