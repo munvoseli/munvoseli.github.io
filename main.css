@@ -76,9 +76,12 @@ li {
 }
 
 a {
-    text-decoration-line: underline;
+/*    text-decoration-line: underline;
     text-decoration-style: dotted;
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 1px;*/
+    /* this is done to move the line down */
+    text-decoration: none;
+    border-bottom: 1px var(--fg-a) solid;
     color: var(--fg-a);
 }
 
