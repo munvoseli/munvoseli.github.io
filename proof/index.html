@@ -12,12 +12,19 @@
 <p>let us call the minimum side length b, and the maximum side length a.</p>
 <h3>case: b geq 3</h3>
 <p>there is a cool pattern for this which i must demonstrate with images.</p>
+<p>but basically,</p>
+<ul>
+<li>you put a 1x(a-1) rectangle and a 1x2 rectangle on the longest side.</li>
+<li>you put a 1x(b-1) rectangle on the short side it fits on</li>
+<li>you put a 1x(a-1) rectangle on the side it fits on.</li>
+<li>you alternate between putting 1x(b-n) rectangles and 1x(a-n) rectangles next to the last-placed 1x(b-n) rectangles and 1x(a-n) rectangles</li>
+</ul>
 <h3>case: b = 2, a > 2</h3>
 <p>there is a simple pattern for this.  you can put 1x1 rectangles on opposite corners, and then fill the rest in with two rectangles.</p>
-<h3>case: b = 1</h3>
-<p>trivial</p>
 <h3>case: b = 2, a = 2</h3>
 <p>1x2 + 1x2</p>
+<h3>case: b = 1</h3>
+<p>trivial</p>
 <h3>end of cases</h3>
 <p>in every case, it is possible.  therefore, it is always possible</p>
 </body>
