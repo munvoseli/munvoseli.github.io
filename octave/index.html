@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>divisions of octave</title>
+<script src="octave.js" defer></script>
+</head>
+<body>
+  <canvas id="canvas" width="1800" height="800"></canvas>
+  <h2>Math</h2>
+  <h3>Step distance within a base</h3>
+  <p>Suppose k = number of steps, r = some ratio (2, 1.5), b = base (2**(1/12), 2**(1/53), 1.5**(1/9)).</p>
+  <details>
+    <summary>b**k = r</summary>
+    <p>(2**(1/12))**12 = 2.  twelve steps (normal steps, anyway) in an octave.</p>
+    <p>(2**(1/12))**7.02 is about 3/2, the ratio corresponding to a fifth.</p>
+  </details>
+  <p>k = log r / log b</p>
+  <p>k is the number of steps in a base to a certain ratio.  Sometimes it is an integer - 12 "normal" steps are in an octave.  However, it is not usually an integer.</p>
+  <p>If k is very close to an integer (like, 7.02, in the case of the ratio 3/2 and base 2**(1/12)), then k being that integer may be used to approximate the ratio.</p>
+  <p>The diagram above plots a continuum of bases, and several ratios, (almost, clarification later) against the difference between k and the nearest integer to k.  The smaller the distance, the darker the picture.  (Additionally, the graph does have a maximum brightness of grey)</p>
+  <h3>Distance in cents</h3>
+  <p>Cents are just a base with b=2**(1/1200) since there are 1200 cents in a 2:1 ratio.</p>
+  <p>b**k = r</p>
+  <p>b**round(k) = ~r~</p>
+  <p>The distance between ~r~ and r can be measured in cents.</p>
+  <p>2**(c/1200) = r / ~r~ = b**(k-round(k))</p>
+  <p>c/1200 = (k-round(k)) * log b / log 2</p>
+  <p>c = (k - round(k)) * (log b / log 2) * 1200</p>
+  <p>We now have a formula for some sort of "absolute" minimum distance.  This is what is plotted.</p>
+  <h3>plotting</h3>
+  <p>i literally have no idea how i came up with the scale for the x-axis</p>
+  <p>it was linear before, but then 1-2 am brain did *something* and came up with some speck of reasoning</p>
+</body>
+</html>
