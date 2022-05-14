@@ -6,8 +6,9 @@
 <script src="octave.js" defer></script>
 </head>
 <body>
-  <canvas id="canvas" width="1800" height="800"></canvas>
+  <canvas id="canvas" width="1800" height="900"></canvas>
   <h2>Math</h2>
+  <p>I am sorry, but I don't know how to explain these things in a good way.</p>
   <h3>Step distance within a base</h3>
   <p>Suppose k = number of steps, r = some ratio (2, 1.5), b = base (2**(1/12), 2**(1/53), 1.5**(1/9)).</p>
   <details>
@@ -29,8 +30,10 @@
   <p>c = (k - round(k)) * (log b / log 2) * 1200</p>
   <p>We now have a formula for some sort of "absolute" minimum distance.  This is what is plotted.</p>
   <h3>plotting</h3>
-  <p>i literally have no idea how i came up with the scale for the x-axis</p>
-  <p>just having a linear axis means that the sizes between the stripes are really big on one end and really small on the other.</p>
-  <p>it was linear before, but then 1-2 am brain did *something* and came up with some speck of reasoning to make the stripes consistent, but i have no idea what it did</p>
+  <p>Just having a linear axis means that the sizes between the stripes are really big on one end and really small on the other.</p>
+  <p>In the diagram as it is now, x is linear with k - i.e., maybe k = (x + n) / m.  Suppose that we use r = e, just for things to work out.  m would absorb (ln r) anyway.</p>
+  <p>b**k = e</p>
+  <p>b = e ** (1/k) = exp(1 / k)</p>
+  <p>b = exp(m / (x + n))</p>
 </body>
 </html>
