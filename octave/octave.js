@@ -13,7 +13,7 @@ let minb = 1.013;
 let maxb = 1.09;
 let minx = 100;
 let maxx = canvas.width;
-const f = 0.008;
+const f = 0.010;
 //let m = Math.log(maxb / minb) / (maxx - minx);
 //let n = Math.log(minb) - m * minx;
 
@@ -95,7 +95,7 @@ function putLineAtB(b, color) {
 	ctx.beginPath();
 	ctx.strokeStyle = color;
 	ctx.moveTo(x, 0);
-	ctx.lineTo(x, canvas.height);
+	ctx.lineTo(x, canvas.height - h / 2);
 	ctx.stroke();
 	ctx.closePath();
 }
@@ -117,6 +117,7 @@ putLineAtB(2**(1/15.385), "#af0");
 putLineAtB(2**(1/18.809), "#af0");
 putLineAtB(2**(1/34.188), "#af0");
 putLineAtB(3**(1/13), "#0af");
+putLineAtB(1.0468, "#f0f");
 
 ctx.font = "20px monospace";
 ctx.textAlign = "center";
@@ -127,3 +128,7 @@ for (let i = 0; i < ratios.length; ++i) {
 	ctx.fillText(numer[i], minx / 2, y0 + 1/3 * h);
 	ctx.fillText(denom[i], minx / 2, y0 + 2/3 * h);
 }
+
+ctx.font = "10px monospace";
+ctx.fillStyle = "#aaa";
+ctx.fillText("munvoseli", minx / 2, canvas.height - h / 2);
