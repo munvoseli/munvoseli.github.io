@@ -26,9 +26,15 @@ time, mark, audio, video {
 
 
 :root {
-	--bg-bg: #351;
-	--bg-content: #ded;
-	--fg-a: #341;
+	--bg-bg: #aaa;
+	--bg-content: #ddd;
+	--fg-a: #444;
+}
+
+img {
+    max-width: 100%;
+    margin: auto;
+    display: block;
 }
 
 
