@@ -103,6 +103,10 @@ a:visited {
     color: var(--fg-a);
 }
 
+a>img {
+    display: inline;
+}
+
 :focus-visible {
     outline: none;
     text-decoration-skip-ink: all;
