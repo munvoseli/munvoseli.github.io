@@ -87,8 +87,16 @@ a {
     text-decoration-thickness: 1px;*/
     /* this is done to move the line down */
     text-decoration: none;
-    border-bottom: 1px var(--fg-a) solid;
+    border-bottom: 1px var(--bg-bg) solid;
     color: var(--fg-a);
+}
+
+a:before {
+    content: "{ ";
+}
+
+a:after {
+    content: " }";
 }
 
 a:visited {
