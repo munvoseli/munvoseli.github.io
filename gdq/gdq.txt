@@ -1,0 +1,70 @@
+
+game
+category
+runners
+couch
+start time
+run time
+bid wars
+
+
+
+https://gamesdonequick.com/tracker/runs/frostfatales2020
+https://gamesdonequick.com/schedule/39
+
+-- 2010-01 agdq
+
+-- 2011-01 agdq
+-- 2011-04 japan relief
+-- 2011-08 sgdq
+
+-- 2012-01 agdq
+-- 2012-05 sgdq
+-- 2012-10 speedrun spooktacular
+
+-- 2013-01 agdq
+-- 2013-07 sgdq
+
+-- 2014-01 agdq
+-- 2014-06 sgdq
+
+-- 2015-01 agdq
+-- 2015-03 god of war done quick
+-- 2015-07 sgdq
+
+17 2016-01 agdq
+18 2016-07 sgdq
+
+19 2017-01 agdq
+20 2017-07 sgdq
+21 2017-08 harvey relief
+
+22 2018-01 agdq
+23 2018-06 sgdq
+24 2018-10 gdq express
+
+25 2019-01 agdq
+-- 2019-05 frame fatales
+26 2019-06 sgdq
+-- 2019-08 frame fatales
+27 2019-09 gdq express
+-- 2019-12 classic games done quick
+
+28 2020-01 agdq
+29 2020-02 frost fatales
+31 2020-04 corona relief
+30 2020-08 sgdq
+32 no
+33 2020-11 fleet fatales
+
+34 2021-01 agdq
+35 2021-07 sgdq
+36 2021-08 flame fatales
+
+37 2022-01 agdq
+38 2022-02 frost fatales
+39 2022-06 sgdq
+
+
+
+
