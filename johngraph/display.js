@@ -16,12 +16,13 @@ function isTooClose(y, yvals) {
 	return false;
 }
 
-let yscl = y => Math.pow(Math.log(y), .2);
+//let yscl = y => Math.pow(Math.log(y), .2);
+let yscl = y => y;
 
 function drawPlot() {
 	ctx.fillStyle = "#fff";
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
-	let maxy = yscl(100000);
+	let maxy = yscl(1000);
 	let miny = yscl(4);
 	let maxx = data[data.length-1].date.getTime();
 	let minx = data[0].date.getTime();
