@@ -1,7 +1,7 @@
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
-canvas.width = 1400;
-canvas.height = 2000;
+canvas.width = document.documentElement.clientWidth;
+canvas.height = document.documentElement.clientHeight - 110;
 
 //function yo(y, ys, miny, yd) {
 //	return Math.log(y)
@@ -18,12 +18,18 @@ function isTooClose(y, yvals) {
 
 //let yscl = y => Math.pow(Math.log(y), .2);
 let yscl = y => y;
+let johnmax;
+let johntrack = 0;
+function afterSetJohntrack() {
+	johnmax = 500 * 1.001 ** johntrack;
+}
+afterSetJohntrack();
 
 function drawPlot() {
 	ctx.fillStyle = "#fff";
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
-	let maxy = yscl(1000);
-	let miny = yscl(4);
+	let maxy = yscl(johnmax);
+	let miny = yscl(0);
 	let maxx = data[data.length-1].date.getTime();
 	let minx = data[0].date.getTime();
 	let textx = canvas.width - 200;
@@ -64,3 +70,10 @@ function drawPlot() {
 //	}
 }
 drawPlot();
+
+addEventListener("wheel", function(e) {
+//	console.log(e);
+	johntrack += e.deltaY;
+	afterSetJohntrack();
+	drawPlot();
+}, false);
